@@ -57,6 +57,7 @@ function Snake () {
             if (this.justEat) console.log("PROBLEME");
             rect(this.tail[i].x, this.tail[i].y, scl, scl);
         }
+	fill(0,200,200,100);
         rect(this.x, this.y, scl, scl);
     }
 }

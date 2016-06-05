@@ -1,7 +1,7 @@
 var s;
 var scl = 20;
 var i;
-var speed = 2;
+var speed = 4;
 var food;
 var heightGrid;
 var widthGrid;
