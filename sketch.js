@@ -16,6 +16,7 @@ function setup() {
 
 function draw() {
     background(51);
+    noStroke();
     if (!s.alive) {
         s.total = 0;
         s.alive = true;
