@@ -6,7 +6,7 @@ var food;
 var heightGrid;
 var widthGrid;
 function setup() {
-    createCanvas (1000, 700);
+    createCanvas (700, 1000);
     heightGrid = int(height/scl);
     widthGrid = int(width/scl);
     s = new Snake();
