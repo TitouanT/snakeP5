@@ -33,6 +33,9 @@ function draw() {
     if (i > speed) i = 0;
 }
 
+function mousePressed() {
+	s.justEat = true;
+}
 function keyPressed() {
     if (keyCode === UP_ARROW) {
         s.dir(0, -1);
