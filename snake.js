@@ -8,6 +8,7 @@ function Snake () {
 	this.total = 0;
 	this.tail = [];
 	this.alive = true;
+	this.score = 0;
 	
 	this.dir = function (x, y) {
 		if (abs(x) != abs(this.xspeed) && !this.movementSet) {
@@ -63,7 +64,7 @@ function Snake () {
 			//if (this.justEat) console.log("PROBLEME");
 			rect(this.tail[i].x, this.tail[i].y, scl, scl);
 		}
-	fill(0,200,200,100);
+	fill(0,200,200,200);
 		rect(this.x, this.y, scl, scl);
 	}
 }
