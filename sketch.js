@@ -2,6 +2,7 @@ var scl = 20;
 var speed = 4;
 var s;
 var i;
+var k = 0;
 var food;
 var heightGrid;
 var widthGrid;
@@ -18,12 +19,13 @@ function setup() {
 function draw() {
 	background(72);
 	noStroke();
-	if (!s.alive) {
+	if (!s.alive && k > 200) {
 		//s.total = 0;
 		//s.alive = true;
-	s = new Snake();
+		k = 0;
+		s = new Snake();
 	}
-	if (i == 0 && !gamePause) {
+	if (i == 0 && !gamePause && s.alive) {
 		if (s.eat(food) || mouseIsPressed) {
 			food = createVector(int(random(widthGrid))*scl, int(random(heightGrid))*scl);
 			if (s.justEat) s.score++;
@@ -47,6 +49,12 @@ function draw() {
 	text(t, width - 150, height - 5);
 	i++;
 	if (i > speed) i = 0;
+	if (!s.alive) {
+		k++;
+		fill(0);
+		textSize(80);
+		text("GAME OVER", k+300, height/2);
+	}
 }
 
 //function mousePressed() {

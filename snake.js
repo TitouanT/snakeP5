@@ -36,9 +36,9 @@ function Snake () {
 			
 		}
 		else {
-		this.justEat = false;
-		this.total++;
-	}
+			this.justEat = false;
+			this.total++;
+		}
 		this.tail[this.total - 1] = createVector(this.x, this.y);
 		this.x = this.x + this.xspeed*scl;
 		this.y = this.y + this.yspeed*scl;
@@ -50,7 +50,7 @@ function Snake () {
 		else if (this.y < 0) this.y = height - scl;
 		for (var i = 0; i < this.total; i++) {
 			if (this.tail[i].x == this.x && this.tail[i].y == this.y)
-				this.alive = false;
+			this.alive = false;
 		}
 	}
 
@@ -64,7 +64,7 @@ function Snake () {
 			//if (this.justEat) console.log("PROBLEME");
 			rect(this.tail[i].x, this.tail[i].y, scl, scl);
 		}
-	fill(0,200,200,200);
+		fill(0,200,200,200);
 		rect(this.x, this.y, scl, scl);
 	}
 }
