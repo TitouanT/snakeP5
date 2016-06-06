@@ -19,7 +19,7 @@ function setup() {
 function draw() {
 	background(72);
 	noStroke();
-	if (!s.alive && k > 200) {
+	if (!s.alive && k >= 200) {
 		//s.total = 0;
 		//s.alive = true;
 		k = 0;
@@ -52,7 +52,8 @@ function draw() {
 	if (!s.alive) {
 		k++;
 		fill(0);
-		textSize(80);
+		var t = map (k, 0, 200, 0, PI);
+		textSize(sin(t)*100);
 		text("GAME OVER", k+300, height/2);
 	}
 }
