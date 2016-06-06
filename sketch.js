@@ -33,8 +33,10 @@ function draw() {
 		s.movementSet = false;
 	} 
 	else if (gamePause) {
-		textSize(80);
-		text("PAUSE", width/2 - 130, height/2);
+		//textSize(80);
+		//text("PAUSE", width/2 - 130, height/2);
+		textSize(50);
+		text("Aurel, Guillaume, voici mon snake ;)", 100, height/2);
 	}
 	
 	fill (255, 0, 0, 200);
